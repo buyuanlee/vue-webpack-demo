@@ -2,6 +2,7 @@
   <div>
     <h1>我是一个demo</h1>
     <h2>Essential Links</h2>
+    <h3>{{$route.params.msg}}</h3>
   </div>
 
 </template>
@@ -19,5 +20,7 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+  h3 {
+    color: orange;
+  }
 </style>

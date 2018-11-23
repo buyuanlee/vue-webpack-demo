@@ -1,10 +1,10 @@
 <template>
   <ul>
     <li>
-      <router-link to="/helloworld">Hello World</router-link>
+      <router-link :to="{name:'hello',params:{msg:'hello啊,小老弟'}}">Hello World</router-link>
     </li>
     <li>
-      <router-link to="/demo">demo</router-link>
+      <router-link :to="{name:'demo',params:{msg:'hello啊,小老妹'}}">demo</router-link>
     </li>
   </ul>
 
