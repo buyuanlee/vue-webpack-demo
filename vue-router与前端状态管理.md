@@ -1,4 +1,5 @@
 # vue-router与前端状态管理
+
 ## vue-router路由基本加载
 ### 安装步骤
 1. npm安装vue-router
@@ -35,4 +36,53 @@ new Vue({
 ```vue
 <router-view></router-view>
 ```
+## vue-router路由跳转
+关键词：
+```vue
+<router-link to="/"></router-link>
+```
+demo:(list.vue)
+```vue
+<template>
+  <ul>
+    <li>
+      <router-link to="/helloworld">HELLO WORLD</router-link>
+    </li>
+    <li>
+      <router-link to="/helloearth">HELLO EARTH</router-link>
+    </li>
+  </ul>
+</template>
+```
+
+## 路由参数的传递
+1. 必须在路由内加入路由的name
+2. 必须在path后加入传递的参数（/：传递参数）
+3. 传递参数和接收参数代码如下  
+- 传递方法一：（常用：传递过来的参数是经过转码的    
+查询方式：`/hello/xxx`
+    
+**./src/components/list.vue中传递**
+```vue
+<router-link 
+:to="{name:'hello',params:{msg:'hello啊,小老弟'}}">
+  Hello World
+</router-link>
+```
+- 传递方法二（不常用：）   
+查询方式：`/hello?name=xxx&count=xxx`
+```vue
+<router-link
+:to="{path:'/hello',query:{msg:hello啊,小老弟}}">
+  Hello World
+</router-link>
+```
+
+- 接收方法
+**./src/components/demo.vue中读取参数**
+```vue
+$route.params.xxx
+```
+
+
 
