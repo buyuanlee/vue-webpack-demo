@@ -77,12 +77,43 @@ demo:(list.vue)
   Hello World
 </router-link>
 ```
+你可以创建一个函数返回 props。这样你便可以将参数转换成另一种类型，将静态值与基于
+路由的值结合等等。
+```vue
+const router = new VueRouter({
+  routes: [
+  { path: '/search', component: SearchUser, props: (route) => ({
+  query: route.query.q }) }
+  ]
+})
+```
 
 - 接收方法
 **./src/components/demo.vue中读取参数**
 ```vue
 $route.params.xxx
 ```
+
+## Axios中的请求
+### 介绍
+> axios 是一个基于Promise 用于浏览器和 nodejs 的 HTTP 客户端    
+
+特征如下：
+- 从浏览器中创建 XMLHttpRequest
+- 从 node.js 发出 http 请求
+- 支持 Promise API
+- 拦截请求和响应
+- 转换请求和响应数据
+- 取消请求
+- 自动转换JSON数据
+- 客户端支持防止 CSRF/XSRF
+
+### 安装方法：
+1. npm安装axios
+```npm
+npm install axios
+```
+### Axios中的get请求
 
 
 

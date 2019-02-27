@@ -20,7 +20,7 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  h3 {
-    color: orange;
-  }
+h3{
+  color: orange;
+}
 </style>
